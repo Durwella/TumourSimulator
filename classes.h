@@ -91,7 +91,7 @@ public:
 	inline void operator-= ( const vecd& V2 ) {
 		x -= V2.x; y -= V2.y; z -= V2.z;
 	}
-	inline vecd operator*= (double S) {
+	inline void operator*= (double S) {
 		x*=S ; y*=S ; z*=S ;
 	}
 	inline vecd operator/= (double S) {

@@ -54,6 +54,7 @@
 #define SWAP(x, y) temp = (x); (x) = (y); (y) = temp
 #include <vector>
 #include <iostream>
+#include <ctime>
 using namespace std;
 
 char *NUM ; // name given as 1st argument from the command line
@@ -361,7 +362,8 @@ void reset()
 #elif defined __APPLE__
   // not defined yet
 #else
-  times->_ptr = times->_base ; // this operates on elements of _iobuf and is specific to Windows GNU C++
+  rewind(times);
+  //times->_ptr = times->_base ; // this operates on elements of _iobuf and is specific to Windows GNU C++
 #endif
 }
 
